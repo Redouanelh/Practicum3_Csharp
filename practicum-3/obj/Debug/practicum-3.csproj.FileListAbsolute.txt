@@ -1,0 +1,7 @@
+C:\Users\Redou\source\repos\practicum3\practicum-3\bin\Debug\practicum-3.exe.config
+C:\Users\Redou\source\repos\practicum3\practicum-3\bin\Debug\practicum-3.exe
+C:\Users\Redou\source\repos\practicum3\practicum-3\bin\Debug\practicum-3.pdb
+C:\Users\Redou\source\repos\practicum3\practicum-3\obj\Debug\practicum-3.csprojAssemblyReference.cache
+C:\Users\Redou\source\repos\practicum3\practicum-3\obj\Debug\practicum-3.csproj.CoreCompileInputs.cache
+C:\Users\Redou\source\repos\practicum3\practicum-3\obj\Debug\practicum-3.exe
+C:\Users\Redou\source\repos\practicum3\practicum-3\obj\Debug\practicum-3.pdb
