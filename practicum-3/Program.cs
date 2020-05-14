@@ -16,11 +16,20 @@ namespace practicum_3
             { 
                 Console.WriteLine(word);
             }
+
+            Console.WriteLine("\n");
+
+            var collectie = GetWords(path, s => s.StartsWith("b")).ToArray();
             
-            // "both" en "quince" gaan fout? En een whitespace?
+            Array.Sort(collectie, (x, y) => x.Length.CompareTo(y.Length));
+
+            foreach(String word in collectie)
+            {
+                Console.WriteLine(word);
+            }
         }
 
-        public static IEnumerable<string> GetWords(String path, Func<String, Boolean> startsWithFunction)
+        public static IEnumerable<string> GetWords(String path, Func<String, Boolean> checkFunction)
         {
             // De tekst binnen de meegegeven file
             String text = null;
@@ -32,18 +41,15 @@ namespace practicum_3
             }
             catch (Exception e)
             {
-                Console.WriteLine("File not found on path: " + path, e);
+                Console.WriteLine("File not found on path: " + path, e.ToString());
             }
 
             // Splitten op whitespace, komma, punt, puntkomma
-            String[] woorden = text.Split(new Char[] { ',', '.', ';', ' ' }, StringSplitOptions.RemoveEmptyEntries);
-
-            // Nog niet helemaal duidelijk hoe dit nou precies werkt
-            Array.Sort(woorden, (x, y) => x.Length.CompareTo(y.Length));
+            String[] woorden = text.Split(new Char[] { ',', '.', ';', ' ', '\n' }, StringSplitOptions.RemoveEmptyEntries);
 
             foreach (String word in woorden)
             {
-                if (startsWithFunction(word))
+                if (checkFunction(word))
                 {
                     yield return word;
                 }
